@@ -1,0 +1,13 @@
+1.c++基本数据类型
+ ·整形有char、short、int、long、long long，这5个也默认为signed XX ;
+    规则：short至少16位；int至少和short一样；long至少32位，且至少和int一样长；long long至少64位，且至少和long一样长。
+    其中，后面4个都有无符号变体。unsigned short、unsigned int、unsigned long、unsigned long long.
+  浮点有3个，float、double、long double
+    规则：float至少4字节；double至少6字节，且不少于float；long double至少和double一样多。
+2.  类型转换(ps:char不能直接转为string)
+to_string(整型（除了char）)：将int/short/long/long long/float/double转换为string类型
+char 转string不能直接转：
+char c='a';string s;
+1)s.append(n,c);//即向末尾添加n个ch字符
+2)s = string(n,c);//使用构造函数string(n, c)将字符串初始化为n个c字符的副本
+3)s="0";s[0]=c;
